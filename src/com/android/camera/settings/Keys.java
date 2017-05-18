@@ -83,7 +83,6 @@ public class Keys {
     public static final String KEY_SHOULD_SHOW_SETTINGS_BUTTON_CLING =
             "pref_should_show_settings_button_cling";
     public static final String KEY_HAS_SEEN_PERMISSIONS_DIALOGS = "pref_has_seen_permissions_dialogs";
-    public static final String KEY_POWER_SHUTTER = "pref_power_shutter";
     public static final String KEY_MAX_BRIGHTNESS = "pref_max_brightness";
     public static final String KEY_STORAGE = "pref_camera_storage_key";
 
@@ -234,15 +233,7 @@ public class Keys {
         return settingsManager.getBoolean(SettingsManager.SCOPE_GLOBAL,
                                           KEY_CAMERA_GRID_LINES);
     }
-
-    /**
-     * Returns whether power shutter is set on.
-     */
-    public static boolean isPowerShutterOn(SettingsManager settingsManager) {
-        return settingsManager.getBoolean(SettingsManager.SCOPE_GLOBAL,
-                KEY_POWER_SHUTTER);
-    }
-
+	
     /**
      * Returns whether max brightness is set on.
      */
