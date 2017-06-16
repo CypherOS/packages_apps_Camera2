@@ -179,7 +179,7 @@ import java.util.List;
 
 public class CameraActivity extends QuickActivity
         implements AppController, CameraAgent.CameraOpenCallback,
-        ShareActionProvider.OnShareTargetSelectedListener {
+        ShareActionProvider.OnShareTargetSelectedListener, SettingsManager.OnSettingChangedListener {
 
     private static final Log.Tag TAG = new Log.Tag("CameraActivity");
 
@@ -581,7 +581,7 @@ public class CameraActivity extends QuickActivity
     }
 
     @Override
-    public void onSettingChanged(SettingsManager settingsManager, String key) {
+    public void onSettingChanged(String key) {
         if (key.equals(Keys.KEY_MAX_BRIGHTNESS)) {
             initMaxBrightness();
         } else if (key.equals(Keys.KEY_STORAGE)) {
